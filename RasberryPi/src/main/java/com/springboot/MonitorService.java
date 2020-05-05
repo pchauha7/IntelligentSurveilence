@@ -16,7 +16,7 @@ public class MonitorService implements Runnable {
 	public void run() {
 		HashSet<String> hs = new HashSet<String>();
 		String folderName = "/home/pi/work";
-		//BasicAWSCredentials awsCreds = new BasicAWSCredentials("ASIA25FZ7XDFTQKIW42I", "7qWaaWpC4LhnBFefW59S+Tias+T9cMPatndZseLn");
+	
 		BasicAWSCredentials awsCreds = new BasicAWSCredentials(
 				DemoApplication.access_key, 
 				DemoApplication.secret_key
