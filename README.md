@@ -10,7 +10,7 @@ In this project, we have developed the surveillance system using Raspberry pi as
   <img src="./Architecture_of_Surveillance_system.png" alt="Architure overview of Surveillance system"/>
 </p>
 
-Following are the setup instruction to for different components taken into accout:
+Following are the setup instruction for different components of the system taken into accout:
 
 #### Raspberry Pi
 
