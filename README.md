@@ -1,5 +1,15 @@
 # IntelligentSurveilence
-Raspberry Pi
+
+### Introduction
+
+In this project, we have developed the surveillance system using Raspberry pi as an IOT device and AWS for Auto-Scaling the application. The Raspberry Pi has a camera and motion sensor attached to it. The camera captures the intruder and records a video. Then the object detection in a recorded video is done using the lightweight deep learning framework, Darknet, on the Raspberry Pi. However, to minimize the end to end latency of object detection, we make use of AWS, a IaaS provider, EC2 instances for computing and S3 (Simple Storage Service) storage to achieve it. Also, we used SQS (Simple Queue Service) which helps in load balancing the workload of surveillance systems between the Raspberry Pi, an Edge Computing device, and the AWS. 
+
+#### Overview Architecture of Surveillance system
+![Architure overview of Surveillance system](Architecture_of_Surveillance_system.png)
+
+Following are the setup instruction to for different components taken into accout:
+
+#### Raspberry Pi
 
 ● Download ​Etcher​ (​https://www.balena.io/etcher/​), a tool for flashing OS images to SD cards, to the host computer. Download the ​Raspbian​ image using the following link https://drive.google.com/open?id=1ORRN0qI4uOuyQtsQa4jMlIm4WcoRtNTa​. ​Flash the Raspbian image to a microSD card using Etcher. Plug the card to the Raspberry Pi (we will call it the ​Pi​ hereinafter) and power it up.
 
@@ -13,7 +23,7 @@ Raspberry Pi
 
 ● Environment setup on startup- Place the command ​Xvfb :1 & export DISPLAY=:1 which is used to run the darknet code on systems without displays, in the ~/.bashrc file.
     
-Executor EC2 (Slave Code)
+#### Executor EC2 (Slave Code)
 
 ● Install Java on EC2 to run the jar - Use the command ​sudo apt install openjdk-8-jdk-headless ​to run jar files on EC2.
 
@@ -21,7 +31,7 @@ Executor EC2 (Slave Code)
 
 ● Place the jar file cse546_ec2.jar at /home/ubuntu and make a /home/ubuntu/work directory to store the video and result file.
 
-Master EC2 (Master Code)
+#### Master EC2 (Master Code)
 
 ● Install Java on EC2 to run the jar - Use the command ​sudo apt install openjdk-8-jdk-headless ​to run jar files on EC2.
 
