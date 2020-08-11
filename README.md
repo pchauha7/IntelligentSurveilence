@@ -1,4 +1,4 @@
-# IntelligentSurveilence
+# Intelligent Surveillance
 
 ### Introduction
 
